@@ -1,0 +1,51 @@
+<nav class="app__header__nav navbar-scrolled">
+  <h3 class="app__header__nav-logo" routerLink="/" style="cursor: pointer">
+    Foodgram
+  </h3>
+  <ul class="app__header__nav-menus_container">
+    <li class="app__header__nav-menu">
+      <a routerLink="/">Home</a>
+    </li>
+    <!-- <li class="app__header__nav-menu">
+      <a href="#feature">Packages</a>
+    </li>
+    <li class="app__header__nav-menu">
+      <a href="#review">Review</a>
+    </li>
+    <li class="app__header__nav-menu">
+      <a href="#aboutUs">About Us</a>
+    </li> -->
+
+    <li class="app__header__nav-menu">
+      <a routerLink="foodlist">All Food</a>
+    </li>
+
+    <li class="app__header__nav-menu">
+      <a
+        routerLink="/cart-page"
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 5px;
+        "
+      >
+        <mat-icon>add_shopping_cart</mat-icon>
+        Cart
+        <span>({{ cartQuantity }})</span>
+      </a>
+    </li>
+
+    <li class="app__header__nav-menu">
+      <a href="#aboutUs">About Us</a>
+    </li>
+
+    <li *ngIf="!isLoggedIn()" class="app__header__nav-menu active">
+      <a href="#" routerLink="login">Login</a>
+    </li>
+
+    <li *ngIf="isLoggedIn()" class="app__header__nav-menu active">
+      <a href="#" (click)="logout()">Logout</a>
+    </li>
+  </ul>
+</nav>

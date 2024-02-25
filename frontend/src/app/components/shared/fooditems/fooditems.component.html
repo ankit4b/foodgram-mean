@@ -1,0 +1,12 @@
+<div class="fooditems">
+  <app-not-found
+    [visible]="!foods || !foods.length"
+    resetLinkText="Reset Search"
+  >
+  </app-not-found>
+  <ul>
+    <li *ngFor="let food of foods">
+      <app-food-card [food]="food"></app-food-card>
+    </li>
+  </ul>
+</div>

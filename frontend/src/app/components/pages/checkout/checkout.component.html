@@ -1,0 +1,105 @@
+<div class="checkout-container">
+  <!-- <div class="address-container">
+    <div class="title">
+      <h2>Add Shipping Address</h2>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <input
+          type="text"
+          name="firstName"
+          class="form-control"
+          [(ngModel)]="addressData.firstName"
+          placeholder="First Name"
+        />
+        <input
+          type="text"
+          name="lastName"
+          class="form-control"
+          [(ngModel)]="addressData.lastName"
+          placeholder="Last Name"
+        />
+      </div>
+      <input
+        type="number"
+        name="pincode"
+        class="form-control"
+        [(ngModel)]="addressData.pincode"
+        placeholder="Pincode"
+      />
+      <input
+        type="text"
+        name="landmark"
+        class="form-control"
+        [(ngModel)]="addressData.landmark"
+        placeholder="Landmark"
+      />
+      <input
+        type="text"
+        name="city"
+        class="form-control"
+        [(ngModel)]="addressData.city"
+        placeholder="City"
+      />
+      <input
+        type="text"
+        name="state"
+        class="form-control"
+        [(ngModel)]="addressData.state"
+        placeholder="State"
+      />
+      <input
+        type="tel"
+        name="phone"
+        class="form-control"
+        [(ngModel)]="addressData.phone"
+        placeholder="Phone Number"
+      />
+      <div class="form-group">
+        <input type="checkbox" name="billingAddress" />
+        <span>Same as Billing Address</span>
+        <a class="addLink">Add Billing Address</a>
+      </div>
+
+      <button type="submit" class="submit">Save and Deliver here</button>
+    </form>
+  </div> -->
+  <div class="order-container">
+    <!-- <div class="status">
+      <span>Cart</span>
+      <span> - - - - - - </span>
+      <span style="color: rgb(14, 169, 89)">Delivery</span>
+      <span> - - - - - - </span>
+      <span>Payment</span>
+    </div> -->
+    <div class="order-summery">
+      <h3 class="heading">Order Summery</h3>
+      <div>
+        <table>
+          <tr>
+            <td>Total Quantity</td>
+            <td>{{ cart.totalCount }}</td>
+          </tr>
+          <tr>
+            <td>Order Total</td>
+            <td>{{ cart.totalPrice | currency }}</td>
+          </tr>
+          <tr>
+            <td>Delivery Charges</td>
+            <td>{{ deliveryCharges | currency }}</td>
+          </tr>
+          <tr>
+            <td style="border-top: 1px solid #aaa"><b>TOTAL PAYABLE</b></td>
+            <td style="border-top: 1px solid #aaa">
+              <b>{{ cart.totalPrice + deliveryCharges | currency }}</b>
+            </td>
+          </tr>
+        </table>
+
+        <!-- <button class="place-order" (click)="placeOrder()">Place order</button> -->
+        <div #paymentRef></div>
+      </div>
+    </div>
+  </div>
+</div>

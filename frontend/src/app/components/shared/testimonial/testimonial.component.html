@@ -1,0 +1,67 @@
+<div class="app__testimonial" id="review">
+  <img src="assets/semicolon.png" class="start" />
+  <img src="assets/semicolon.png" class="end" />
+  <div class="app__testimonial__title">
+    <h2>What our popular customers are saying</h2>
+  </div>
+  <!-- <div class="app__testimonial__body">
+    <div class="app__testimonial__body-user">
+      <div class="app__testimonial__body-user_img">
+        <img [src]="testimonials[activeIndex].image" />
+      </div>
+      <div class="app__testimonial__body-user_details">
+        <h4>{{ testimonials[activeIndex].name }}</h4>
+        <p>{{ testimonials[activeIndex].designation }}</p>
+      </div>
+    </div>
+    <div class="app__testimonial__body-testimonial">
+      <p>{{ testimonials[activeIndex].review }}</p>
+    </div>
+    <div class="app__testimonial__body-rating">
+      {renderStars(testimonials[activeIndex].rating)}
+    </div>
+  </div> -->
+
+  <div class="app__testimonial__body">
+    <div class="app__testimonial__body-user">
+      <div class="app__testimonial__body-user_img">
+        <img src="assets/user.png" />
+      </div>
+      <div class="app__testimonial__body-user_details">
+        <h4>Serhiy Hipsky</h4>
+        <p>CEO Universal</p>
+      </div>
+    </div>
+    <div class="app__testimonial__body-testimonial">
+      <p>
+        But I must explain to you how all this mistaken idea of denouncing
+        pleasure and praising pain was born and I will give you a complete
+        account of the system idea of denouncing pleasure ...But I must explain
+        to you how all this mistaken idea of denouncing pleasure and praising
+        pain was born and I will give you a complete account of the system idea
+        of denouncing pleasure ...
+      </p>
+    </div>
+    <div class="app__testimonial__body-rating">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+  </div>
+
+  <div>
+    <div class="arrows">
+      <span
+        class="fa fa-arrow-circle-o-left icon"
+        style="color: gray"
+        (click)="changeIndex('prev')"
+      ></span>
+      <span
+        class="fa fa-arrow-circle-o-right checked icon"
+        (click)="changeIndex('next')"
+      ></span>
+    </div>
+  </div>
+</div>

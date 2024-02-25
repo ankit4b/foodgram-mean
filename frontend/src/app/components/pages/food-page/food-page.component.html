@@ -1,0 +1,66 @@
+<app-not-found
+  [visible]="!food.id"
+  notFoundMessage="Food Not Found"
+  resetLinkText="Back To Homepage"
+>
+</app-not-found>
+<div *ngIf="food.id" class="container">
+  <img [src]="food.imageUrl" [alt]="food.name" />
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        {{ food.name }}
+      </span>
+      <!-- <span class="favorite {{ food.favorite ? '' : 'not' }}">❤</span> -->
+    </div>
+    <hr style="border: 1px solid #e0e0e0; margin: 1rem 0rem" />
+    <div class="rating">
+      <!-- <star-rating
+        [value]="food.stars"
+        [totalstars]="5"
+        checkedcolor="red"
+        uncheckedcolor="black"
+        size="25px"
+        [readonly]="true"
+      >
+      </star-rating> -->
+      <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+        <ng-template *ngIf="i < food.stars; then star; else blankstar">
+        </ng-template>
+        <ng-template #star>
+          <mat-icon class="star-icon">star</mat-icon>
+        </ng-template>
+        <ng-template #blankstar>
+          <mat-icon class="star-icon">star_border</mat-icon>
+        </ng-template>
+      </ng-container>
+    </div>
+
+    <div class="origins">
+      <span *ngFor="let origin of food.origins">
+        {{ origin }}
+      </span>
+    </div>
+
+    <div class="tags">
+      <a *ngFor="let tag of food.tags" routerLink="/tag/{{ tag }}">
+        {{ tag }}
+      </a>
+    </div>
+
+    <div class="cook-time">
+      <span>
+        Time to cook about <strong>{{ food.cookTime }}</strong> minutes
+      </span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{ food.price | currency }}
+      </span>
+    </div>
+
+    <button (click)="addToCart()">Add To Cart</button>
+  </div>
+</div>

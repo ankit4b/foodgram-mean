@@ -1,0 +1,102 @@
+<div class="login-container">
+  <div class="form-container" *ngIf="isLogin">
+    <div class="title">
+      <h2>Login</h2>
+    </div>
+
+    <form (ngSubmit)="onLoginSubmit()" id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          [(ngModel)]="userData.username"
+          placeholder="xxx@gmail.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="userData.password"
+          placeholder="**********"
+          required
+        />
+      </div>
+
+      <div class="submit">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+
+    <div class="askAccount">
+      <span>Don't have an account?</span><br />
+      <a (click)="switchForm('signup')">Sign-up</a>
+    </div>
+
+    <!-- <div class="google-login" (click)="signInWithGoogle()">
+      <img src="assets/google_logo.png" />
+      <span>Sign in with Google</span>
+    </div> -->
+  </div>
+
+  <div class="form-container" *ngIf="!isLogin">
+    <div class="title">
+      <h2>Sign-up</h2>
+    </div>
+
+    <form (ngSubmit)="onSignupSubmit()" id="signupForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          [(ngModel)]="userData.username"
+          placeholder="xxx@gmail.com"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="userData.password"
+          placeholder="**********"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Confirm Password</label><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          [(ngModel)]="userData.conf_password"
+          placeholder="**********"
+          required
+        />
+      </div>
+
+      <div class="submit">
+        <button type="submit">Sign-up</button>
+      </div>
+    </form>
+
+    <div class="askAccount">
+      <span>Already have an account?</span><br />
+      <a (click)="switchForm('login')">Login</a>
+    </div>
+  </div>
+</div>

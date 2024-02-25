@@ -1,0 +1,43 @@
+.app__foodmenus {
+    margin-top: 18rem;
+  }
+  
+  .app__foodmenus__header {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4rem;
+  }
+  
+  .app__foodmenus__header h1 {
+    flex: 1;
+    color: var(--black);
+  }
+  
+  .app__foodmenus__header p {
+    flex: 2;
+    color: var(--gray);
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+  
+  .app__foodmenus__swipper {
+    /* width: 80%;
+    margin: auto; */
+    margin-bottom: 5rem;
+  }
+  
+  .swiper-slide {
+    text-align: -webkit-center;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .app__foodmenus__header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+  

@@ -1,0 +1,141 @@
+.app__header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  transition: 0.5s background-color ease-in-out;
+}
+.navbar-scrolled {
+  background-color: #0806068b;
+  /* color: #fff; */
+}
+
+.app__header__nav-logo {
+  color: var(--white);
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.app__header__nav-menus_container {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  gap: 4rem;
+  align-items: center;
+}
+
+.app__header__nav-menu a {
+  color: var(--white);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.active {
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 400;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  outline: 0.7px dashed #ccc;
+  outline-offset: -4px;
+  transition: 0.2s outline-offset cubic-bezier(0.34, 0, 0.52, 0.91);
+}
+
+.active:hover {
+  outline-offset: 5px;
+}
+
+.sm-nav_section {
+  display: none;
+}
+
+.fa-bars {
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* nav for small device */
+.sm-nav-menus_section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2000ms ease-in;
+  z-index: 5;
+}
+
+.app__header__sm-nav-menus_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.app__header__sm-nav-menu a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.app__header__sm-nav-menus_container .active a {
+  color: var(--white);
+}
+
+.fa-close {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+  font-size: 1.5rem;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.app__header__nav-menu {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.app__header__nav-menu::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--orange);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.active-link {
+  color: red;
+}
+
+.app__header__nav-menu:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 1000px) {
+  .sm-nav_section {
+    display: block;
+  }
+  .app__header__nav-menus_container {
+    display: none;
+  }
+}

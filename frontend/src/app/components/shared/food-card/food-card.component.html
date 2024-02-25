@@ -1,0 +1,46 @@
+<div class="large-card-area" routerLink="/food/{{ food.id }}">
+  <div class="card-img">
+    <img [src]="food.imageUrl" />
+  </div>
+  <div class="card-title">
+    <h3>{{ food.name }}</h3>
+
+    <!-- <span class="favorite {{ food.favorite ? '' : 'not' }}"> ❤ </span> -->
+
+    <!-- stars -->
+    <div class="section1">
+      <div class="stars">
+        <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+          <ng-template *ngIf="i < food.stars; then star; else blankstar">
+          </ng-template>
+          <ng-template #star>
+            <mat-icon class="star-icon">star</mat-icon>
+          </ng-template>
+          <ng-template #blankstar>
+            <mat-icon class="star-icon">star_border</mat-icon>
+          </ng-template>
+        </ng-container>
+      </div>
+
+      <p style="padding: 0"><span>🕒</span> {{ food.cookTime }}min</p>
+    </div>
+
+    <div class="product-item-footer">
+      <div class="origins">
+        <span *ngFor="let origin of food.origins">
+          {{ origin }}
+        </span>
+      </div>
+
+      <!-- <div class="cook-time">
+        <span>🕒</span>
+        {{ food.cookTime }}
+      </div> -->
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <p>{{ food.price | currency }}</p>
+    <button>Add to cart</button>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+// /* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+// *{
+//   box-sizing: border-box;
+// }
+
+// html{
+//   font-size:16px;
+// }
+
+// html,
+// button{
+//   font-family: "Quicksand", "sans-serif";
+// }
+
+// body{
+//   margin: 0;
+// }
+
+// a{
+//   text-decoration: none;
+// }
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Vina+Sans&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --orange: #df6751;
+  --black: #191d23;
+  --gray: #75797f;
+  --background: #f8f9fb;
+  --white: #eee;
+}
+
+body {
+  background-color: var(--background);
+  /* font-family: "Josefin Sans", sans-serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
