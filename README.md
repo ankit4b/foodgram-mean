@@ -2,6 +2,9 @@
 
 Foodgram is a modern web application tailored for a specific restaurant, offering an engaging and visually appealing user interface. The application allows users to explore the restaurant's menu, filter through various food items, add them to their cart, and make payments seamlessly through PayPal.
 
+<a href="https://ankit4b.github.io/Foodgram-Angular/">Click here to explore the UI of the Foodgram application.</a>
+
+
 ## Features
 
 - User Registration
